@@ -13,6 +13,11 @@ metadata:
   {{- with .Values.ingress.annotations }}
   annotations:
     {{- toYaml . | nindent 4 }}
+    {{- if $.Values.ingress.basicAuth.enabled -}}
+    nginx.ingress.kubernetes.io/auth-type: basic
+    nginx.ingress.kubernetes.io/auth-secret: {{ $fullName }}-basic-auth
+    nginx.ingress.kubernetes.io/auth-realm: "Authentication Required - ok"
+    {{- end }}
   {{- end }}
 spec:
 {{- if .Values.ingress.tls }}

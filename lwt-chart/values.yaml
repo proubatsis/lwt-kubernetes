@@ -18,12 +18,16 @@ service:
 
 ingress:
   enabled: false
-  annotations: {}
-    # kubernetes.io/ingress.class: nginx
+  annotations:
+    kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   paths: []
   hosts:
     - chart-example.local
+  basicAuth:
+    enabled: false
+    # Default user: admin, Default password: password
+    auth: admin:$apr1$Bsungw4w$d1B3tEUHG2J47rVjG9Yij0
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:
