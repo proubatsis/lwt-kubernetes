@@ -28,6 +28,7 @@ ingress:
     enabled: false
     # Default user: admin, Default password: password
     auth: admin:$apr1$Bsungw4w$d1B3tEUHG2J47rVjG9Yij0
+  clusterIssuer: default-issuer
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:

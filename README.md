@@ -29,7 +29,7 @@ First, download the dependencies.
 helm dep update lwt-chart/
 ```
 
-Next, create a persistent volume however you see fit to bind with the persistent volume claim labelled `app: lwt-mysql`.
+Next, create a persistent volume however you see fit to bind with the persistent volume names `lwt-mysql`.
 
 Finally, install the chart replacing values where appropriate.
 
