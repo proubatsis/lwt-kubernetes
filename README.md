@@ -44,3 +44,21 @@ helm install lwt-chart/ \
     --set ingress.paths[0]=/ \
     --name lwt
 ```
+
+## Configuration
+
+| Parameter                 | Description                                                                       | Default                                     |
+|---------------------------|-----------------------------------------------------------------------------------|---------------------------------------------|
+| image                     | learning-with-texts image repository                                              | proubatsis/learning-with-texts              |
+| imageTag                  | learning-with-texts image tag                                                     | latest                                      |
+| mysql.mysqlDatabase       | Name of database to create                                                        |                                             |
+| mysql.mysqlPassword       | Password to access database                                                       |                                             |
+| mysql.mysqlUser           | Username to access database                                                       |                                             |
+| ingress.enabled           | Enable ingress                                                                    | false                                       |
+| ingress.basicAuth.enabled | Enable basic auth                                                                 | false                                       |
+| ingress.basicAuth.auth    | Basic auth htpasswd, generate value using `htpasswd -n -b [username] [password]`. | admin:$apr1$Bsungw4w$d1B3tEUHG2J47rVjG9Yij0 |
+| ingress.paths[*]          | Path that ingress should route requests for                                       |                                             |
+| ingress.hosts[*]          | Host that ingress should listen for requests on                                   | ["chart-example.local"]                     |
+| ingress.tls[*].secretName | Secret name for TLS certificate                                                   |                                             |
+| ingress.tls[*].hosts[*]   | Hosts that should have TLS enabled                                                |                                             |
+| ingress.clusterIssuer     | If TLS is enabled then this is used to automatically issue certificates           | default-issuer                              |
