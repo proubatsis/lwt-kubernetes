@@ -1,6 +1,6 @@
 # Learning With Texts for Kubernetes
 
-This repo contains a Dockerfile and a Helm chart for deploying the [http://lwt.sourceforge.net/](Learning With Texts) language learning app.
+This repo contains a Dockerfile and a Helm chart for deploying the [Learning With Texts](http://lwt.sourceforge.net/) language learning app.
 
 ## Deploying Learning With Texts
 
